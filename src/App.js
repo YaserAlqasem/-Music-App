@@ -1,8 +1,13 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { ThemeProvider } from "@mui/material";
+import MainLayout from "./Layout/MainLayout";
+import { MainTheme } from "./Themes";
 
 function App() {
-  return <h1>Music App!</h1>;
+  return (
+    <ThemeProvider theme={MainTheme}>
+      <MainLayout />
+    </ThemeProvider>
+  );
 }
 
 export default App;
