@@ -11,7 +11,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 const Header = ({ handleLeftDrawerToggle }) => {
   const theme = useTheme();
   const StyledAvatar = styled(Avatar)(({ theme }) => ({
-    ...theme.palette.commonAvatar,
     transition: theme.transitions.create(["background", "color"]),
   }));
 
