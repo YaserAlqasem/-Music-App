@@ -7,23 +7,25 @@ import {
 } from "@mui/material";
 
 const CardsList = (props) => {
-  return (
-    <Card sx={{ maxWidth: 200, marginRight: 0.9 }} key={props.id}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="180"
-          image={props.img}
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            {props.name}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-  );
+  return props.data.map((item) => {
+    return (
+      <Card sx={{ maxWidth: 200, marginRight: 0.9 }} key={item[props.id]}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="180"
+            image={props.img}
+            alt="green iguana"
+          />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+              {item[props.labelField]}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    );
+  });
 };
 
 export default CardsList;

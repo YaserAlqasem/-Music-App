@@ -10,9 +10,12 @@ const Artists = ({ lstArtists }) => {
     <Card sx={{ width: "auto", padding: 2 }}>
       <CardHeader icon={<SpatialAudioIcon />} />
       <Box sx={{ display: "flex", marginTop: 1 }}>
-        {lstArtists.map((ele) => {
-          return <CardsList id={ele.id_artist} name={ele.artist} img={img} />;
-        })}
+        <CardsList
+          data={lstArtists}
+          id="id_artist"
+          labelField="artist"
+          img={img}
+        />
       </Box>
     </Card>
   );

@@ -16,7 +16,6 @@ const Dashboard = () => {
         setArtists(dataDistinct.lstArtists);
         setAlbums(dataDistinct.lstAlbums);
         setTracks(dataDistinct.lstTracks);
-        console.log(response);
       } catch (err) {
         console.log(err);
       } finally {
@@ -42,7 +41,8 @@ const Dashboard = () => {
     });
     return { lstArtists, lstAlbums, lstTracks };
   };
-  return <Artists lstArtists={lstArtists.slice(0, 5)} />;
+
+  return lstArtists && <Artists lstArtists={lstArtists.slice(0, 5)} />;
 };
 
 export default Dashboard;
